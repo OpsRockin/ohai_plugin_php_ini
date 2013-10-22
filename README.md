@@ -18,7 +18,7 @@ Add php_ini.rb to an ohai_plugin path.
 
 ### Chef
 
-Use for default `client.rb/solo.rb`
+Use as default. add line below to `client.rb/solo.rb`
 
 ```
 Ohai::Config[:plugin_path] << '/path/to/plugin_dir'
@@ -43,7 +43,7 @@ file "#{node['ohai']['plugin_path']}/php.ini.rb" do
 end
 ```
 
-### Node attribute exapmle
+### Node attributes example
 
 You can access those via node[:php_ini] in Cookbooks.
 
