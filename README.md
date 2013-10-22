@@ -4,6 +4,10 @@ ohai plugin `php_ini`
 php_ini plugin for Opscode Ohai(Chef)
 
 
+## Support
+
+`(PHP 5 >= 5.2.0, PECL json >= 1.2.0)`
+
 ## Usage
 
 Add php_ini.rb to an ohai_plugin path.
