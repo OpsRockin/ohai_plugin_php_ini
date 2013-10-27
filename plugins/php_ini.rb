@@ -1,11 +1,12 @@
 require 'json'
-provides 'php_ini'
+provides '"languages/php/php_ini'
 
-php_ini Mash.new
+require_plugin 'php'
 
 cmd = "php -r 'print(json_encode(ini_get_all()));'"
 
 status, stdout, stderr = run_command(:command => cmd)
 return "" if stdout.nil? || stdout.empty?
 
-php_ini JSON::load(stdout)
+languages[:php][:php_ini] = JSON::load(stdout)
+
